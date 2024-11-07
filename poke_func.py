@@ -45,12 +45,6 @@ def getTGPricesbySetId(setid):
 
 
 def update_values(spreadsheet_id, range_name, value_input_option, _values, google_api_file):
-  """
-  Creates the batch_update the user has access to.
-  Load pre-authorized user credentials from the environment.
-  TODO(developer) - See https://developers.google.com/identity
-  for guides on implementing OAuth2 for the application.
-  """
   creds = ServiceAccountCredentials.from_json_keyfile_name(google_api_file)
 
   # pylint: disable=maybe-no-member
@@ -78,12 +72,6 @@ def update_values(spreadsheet_id, range_name, value_input_option, _values, googl
     return error
   
 def batch_update_values(spreadsheet_id, range_name, value_input_option, _values, google_api_file):
-  """
-  Creates the batch_update the user has access to.
-  Load pre-authorized user credentials from the environment.
-  TODO(developer) - See https://developers.google.com/identity
-  for guides on implementing OAuth2 for the application.
-  """
   creds = ServiceAccountCredentials.from_json_keyfile_name(google_api_file)
   # pylint: disable=maybe-no-member
   try:
